@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEO Booster Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚀 SEO Booster Dashboard</h1>
+            <p>Optimisez automatiquement vos sites web avec l'IA</p>
+        </div>
+
+        <div class="controls">
+            <h3>⚙️ Configuration des Sites</h3>
+            <div class="control-group">
+                <div class="input-group">
+                    <label for="siteUrl">URL du site à analyser</label>
+                    <input type="url" id="siteUrl" placeholder="https://monsite.com">
+                </div>
+                <div class="input-group">
+                    <label for="keywords">Mots-clés cibles (séparés par des virgules)</label>
+                    <input type="text" id="keywords" placeholder="seo, optimisation, marketing">
+                </div>
+            </div>
+            <div class="control-group">
+                <button class="btn btn-primary" onclick="addSite()">
+                    ➕ Ajouter le site
+                </button>
+                <button class="btn btn-secondary" onclick="analyzeAllSites()">
+                    🔍 Analyser tous les sites
+                </button>
+                <button class="btn btn-secondary" onclick="generateAIRecommendations()">
+                    🤖 Recommandations IA
+                </button>
+            </div>
+            <div class="progress-bar" id="progressBar" style="display: none;">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+        </div>
+
+        <div class="sites-container" id="sitesContainer">
+            <!-- Les sites seront ajoutés dynamiquement ici -->
+        </div>
+
+        <div class="ai-suggestions" id="aiSuggestions" style="display: none;">
+            <h3>Recommandations IA Avancées</h3>
+            <div id="aiContent">
+                <!-- Les suggestions IA seront ajoutées ici -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
